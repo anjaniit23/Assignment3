@@ -1,81 +1,154 @@
 .dashboard{
     width :60%;
     margin:auto;
-    border: 2px solid black;
 }
+.messagedashboard{
+    width: 50%;
+    height:50px;
+    margin: auto;
+    padding-top: 8px;
+    padding-bottom: 40px;
+    font-size: 3rem;
+    font-family:Georgia; 
+    color: rgb(12, 232, 248);
+    text-shadow: 2px 2px 3px rgb(66, 3, 3);
+}
+a:link,a:visited{
+    color: wheat;
+    font-size: 5rem;
+    text-decoration: none;
+    text-shadow: 4px 4px 6px rgb(17, 16, 16);
+    font-family:Georgia; 
+    margin: 2% 2% 2% 5%;
+
+  }
+a:hover{
+    transition:  ease-out;
+    color: black;
+    text-shadow: 4px 4px 6px rgb(220, 223, 220);
+}
+.dashboardlink{
+    margin: 2% 2% 2% -8%;
+    
+    
+  }
+  .navbar{
+    height: 10%;
+    padding-top: 5%;
+  }
 .headingtext{
     padding-left:4%;
     width: 60%;
     height: 20%;
-    margin: 0.5% 0% 1% 26%;
-    border: 2px solid blue;
+    margin: 0.5% 0% 1% 22%;
     text-align: left;
+    font-size: 4rem;
+    font-weight: 500;
+}
+.postfields{
+    border: 2px solid black;
+    height: 150px;
+    font-family:Palatino Linotype;
 }
 .posttitle{
     width:50%;
-    height:30%;
     margin: 0 0 0 25%;
     border:1px solid red;
-
+    font-size: 2.5rem;
+    font-family:Book Antiqua;
+    font-weight: 400;
+    box-shadow: 5px 5px 20px     rgb(12, 12, 12),5px -5px 20px     rgb(12, 12, 12),-10px 5px 10px     rgb(12, 12, 12);
+    background-image:linear-gradient(to right top,rgba(243, 207, 3, 0.705),rgba(247, 7, 7, 0.767));
+    background-size:contain;
+}
+.postgap{
+    height:50px;
 }
 .post{
     width: 30%;
-    height: 170px;
     margin: auto;
-    border: 2px solid black;
+    border: 2px solid rgb(177, 23, 23);
+    box-shadow: 5px -5px 10px   rgb(224, 21, 106), 0px -5px 10px   rgb(12, 12, 12),0px 10px 10px   rgb(12, 12, 12),20px -10px 10px   rgb(12, 12, 12);
+    background-color: wheat;
 }
 .upper{
     width: 100%;
     height: 30px;
-    border: 1px solid black;
-
+    font-size: 2.1rem;
    
 }
 .postusername{
    width:55%;
+   text-decoration: underline;
    margin: -0.3% 0 0 0;
    float:left;
    padding-left:5%;
    height: 25px;
    text-align: left;
-   border: 2px solid blue;
+   font-family:Book Antiqua;
 }
 
 .postcontent{
     margin:0;
-    
+    font-family:Book Antiqua;
     padding-left:5%;
-    height:100px;
     text-align: left;
-    border: 2px solid rgb(31, 202, 45);
+    font-size: 1.8rem;
  }
 .editbutton{
+    width: 20%;
+    height: 30px;
     float:right;
-    border: 1px solid black;
     margin-right: 3%;
 } 
 .imglike{
+    margin-left: 5%;
     width: 100px;
     height: 30px;
     float: left;
-    border: 1px solid blue;
     text-align: left;
 }
 .imgdislike{
+    margin-right: 5%;
     width: 100px;
     height: 30px;
     float: right;
-   
-    border: 1px solid blue;
     text-align: right;
 }
+.count{
+   
+    width:100%;
+    height: 30px;
+}
 .textlike{
+    font-size: 1.8rem;
     width: 20%;
     margin: -30% 0 0 33%;
    
 }
 .textdislike{
+    font-size: 1.8rem;
     width: 20%;
     margin: -30% 0 0 40%;
    
 }
+.edit,edit:hover {
+    cursor: pointer;
+    margin-top: -7%;
+    margin-left: 10%;
+    width: 30%;
+    height: 88%;
+    font-size: 3rem;
+    color: rgb(29, 218, 129);
+   
+  }
+.delete,delete:hover{
+    cursor: pointer;
+    margin: -32% 0 0 58%;
+    width: 30%;
+    height: 88%;
+    font-size:3rem;
+    color: rgb(235, 13, 13);
+   
+}
+  
