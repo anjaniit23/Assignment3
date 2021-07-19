@@ -50,18 +50,29 @@ import './Signup.css';
         <div>
          <div className="message">{this.state.messagesignup[this.state.messagesignupindex]}</div>
          <div className="signup">
-         <p className="text">Name  </p>
-         <div className="inputbox">:&nbsp;<input id="Name" type="text" onChange={()=>{pushinginputtyped("Name",0)}}/> </div>
-         <p className="text">Email-Id </p>
-         <div className="inputbox">:&nbsp;<input id="Email-Id" type="email"  onChange={()=>{pushinginputtyped("Email-Id",1)}}/> </div>
-         <p className="text">Phone number </p>
-         <div className="inputbox">:&nbsp;<input id="Phone number"  type="number" onChange={()=>{pushinginputtyped("Phone number",2)}}/> </div>
-         <p className="text">Password </p>
-         <div className="inputbox">:&nbsp;<input id="Password"  type="password"  onChange={()=>{pushinginputtyped("Password",3)}}/> </div>
-         <p className="text">Confirm Password </p>
+         <div className="text">
+         <span>Name  </span>
+         <div className="inputbox">:<input id="Name" type="text" onChange={()=>{pushinginputtyped("Name",0)}}/> </div>
+         </div>
+         <div className="text">
+         <span >Email-Id </span>
+         <div className="inputbox">:<input id="Email-Id" type="email"  onChange={()=>{pushinginputtyped("Email-Id",1)}}/> </div>
+         </div>
+         <div className="text">
+         <span>Phone number </span>
+         <div className="inputbox">:<input id="Phone number" pattern=".{10,}" type="number" onChange={()=>{pushinginputtyped("Phone number",2)}}/> </div>
+         </div>
+         <div className="text">
+         <span>Password </span>
+         <div className="inputbox">:<input id="Password"  type="password"  onChange={()=>{pushinginputtyped("Password",3)}}/> </div>
+         </div>
+         <div className="text">
+         <span >Confirm Password </span>
          <div className="inputbox">:&nbsp;<input  id="Confirm Password" type="password" onChange={()=>{pushinginputtyped("Confirm Password",4)}}/> </div>
          </div>
-         <div className="btnsignup" ><button  onClick={Checking}>Submit</button></div>
+         <div  ><button className="btnsignup" onClick={Checking}>Submit</button></div>
+         </div>
+         
         </div>
        
     );
@@ -69,6 +80,3 @@ import './Signup.css';
 }
 export default Signup;
 
-
- 
- 
