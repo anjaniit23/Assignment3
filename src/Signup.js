@@ -5,7 +5,7 @@ import './Signup.css';
  class Signup extends Component  { 
      state={
            
-     messagesignup:['','Signed-Up Successfully',"Do not leave any field 'Empty'","Password and Confirm Password doesn't match","Use '@' in Email-Id"],
+     messagesignup:['','Signed-Up Successfully',"Do not leave any field 'Empty'","Password and Confirm Password don't match","Use '@' in Email-Id"],
      messagesignupindex:0,
      arrayFieldinput:[' ',' ',' ','','']
      }
