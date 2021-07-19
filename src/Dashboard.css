@@ -3,10 +3,10 @@
     margin:auto;
 }
 .messagedashboard{
-    width: 50%;
+    width: 70%;
     height:50px;
     margin: auto;
-    padding-top: 1rem;
+    padding-top: 10rem;
     padding-bottom: 2rem;
     font-size: 2rem;
     font-family:Georgia; 
@@ -24,8 +24,8 @@ a:link,a:visited{
   }
 a:hover{
     transition:  ease-out;
-    color: black;
-    text-shadow: 4px 4px 6px rgb(220, 223, 220);
+    color: rgb(27, 25, 25);
+    text-shadow: 2px 2px 4px rgb(220, 223, 220);
 }
 .dashboardlink{
     margin: 2% 2% 2% -8%;
@@ -33,8 +33,13 @@ a:hover{
     
   }
   .navbar{
-    height: 10%;
-    padding-top: 5%;
+    height: 8%;
+    padding-top: 2%;
+    display: flexbox;
+     background-color: rgb(46, 16, 216);
+    z-index: 10;
+    position:fixed;
+    width: 100%;
   }
 .headingtext{
     padding-left:4%;
@@ -156,6 +161,7 @@ a:hover{
      font-size: 6px;
 
  }
+
  .headingtext{
     width: 100%;
     height: 20%;
@@ -193,6 +199,11 @@ a:hover{
     color: rgb(29, 218, 129);
    
   }
+  .dashboardlink{
+    margin: 2% 2% 2% -20%;
+    
+    
+  }
 .delete,delete:hover{
     cursor: pointer;
     margin: -80% 0 0 40%;
@@ -204,11 +215,11 @@ a:hover{
 }
 a:link,a:visited{
     color: wheat;
-    font-size: 3rem;
+    font-size: 2rem;
     text-decoration: none;
     text-shadow: 4px 4px 6px rgb(17, 16, 16);
     font-family:Georgia; 
-    margin: 1rem 1rem 1rem 1rem;
+    margin: 1rem 1rem 1rem 0.5rem;
 
   }
 
