@@ -17,7 +17,7 @@ render(){
         <div>
           <Switch>
             <Route path="/"  >
-            exact <Dashboard />
+             <Dashboard />
             </Route>
           </Switch>
         </div>
