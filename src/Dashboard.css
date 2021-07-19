@@ -6,20 +6,20 @@
     width: 50%;
     height:50px;
     margin: auto;
-    padding-top: 8px;
-    padding-bottom: 40px;
-    font-size: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    font-size: 2rem;
     font-family:Georgia; 
     color: rgb(12, 232, 248);
     text-shadow: 2px 2px 3px rgb(66, 3, 3);
 }
 a:link,a:visited{
     color: wheat;
-    font-size: 5rem;
+    font-size: 3rem;
     text-decoration: none;
     text-shadow: 4px 4px 6px rgb(17, 16, 16);
     font-family:Georgia; 
-    margin: 2% 2% 2% 5%;
+    margin: 1rem 1rem 1rem 1rem;
 
   }
 a:hover{
@@ -42,12 +42,12 @@ a:hover{
     height: 20%;
     margin: 0.5% 0% 1% 22%;
     text-align: left;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 500;
 }
 .postfields{
-    border: 2px solid black;
-    height: 150px;
+
+    height: 6rem;
     font-family:Palatino Linotype;
 }
 .posttitle{
@@ -151,4 +151,57 @@ a:hover{
     color: rgb(235, 13, 13);
    
 }
+@media screen and (max-width:500px) {
+    html{
+     font-size: 6px;
+
+ }
+ .headingtext{
+    width: 100%;
+    height: 20%;
+    text-align: left;
+    font-size: 2.3rem;
+    font-weight: 500;
+}
+.postfields{
+
+    height: 6rem;
+    font-family:Palatino Linotype;
+}
+.post{
+    width: 40%;
+    margin: auto;
+    border: 2px solid rgb(177, 23, 23);
+    box-shadow: 5px -5px 10px   rgb(224, 21, 106), 0px -5px 10px   rgb(12, 12, 12),0px 10px 10px   rgb(12, 12, 12),20px -10px 10px   rgb(12, 12, 12);
+    background-color: wheat;
+}
+.imgdislike{
+    margin-right: 5%;
+    margin-top: -25%;
+    width: 100px;
+    height: 30px;
+    float: right;
+    text-align: right;
+}
+.edit,edit:hover {
+    cursor: pointer;
+    margin-top: -7%;
+    margin-left: -20%;
+    width: 30%;
+    height: 88%;
+    font-size: 3rem;
+    color: rgb(29, 218, 129);
+   
+  }
+.delete,delete:hover{
+    cursor: pointer;
+    margin: -110% 0 0 40%;
+    width: 30%;
+    height: 88%;
+    font-size:3rem;
+    color: rgb(235, 13, 13);
+   
+}
+
   
+}
