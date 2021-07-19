@@ -1,207 +1,188 @@
-.dashboard{
-    width :60%;
-    margin:auto;
-}
-.messagedashboard{
-    width: 50%;
-    height:50px;
-    margin: auto;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    font-size: 2rem;
-    font-family:Georgia; 
-    color: rgb(12, 232, 248);
-    text-shadow: 2px 2px 3px rgb(66, 3, 3);
-}
-a:link,a:visited{
-    color: wheat;
-    font-size: 3rem;
-    text-decoration: none;
-    text-shadow: 4px 4px 6px rgb(17, 16, 16);
-    font-family:Georgia; 
-    margin: 1rem 1rem 1rem 1rem;
+import React,{Component} from 'react';
+import { Link } from 'react-router-dom';
+import './Dashboard.css';
 
-  }
-a:hover{
-    transition:  ease-out;
-    color: black;
-    text-shadow: 4px 4px 6px rgb(220, 223, 220);
-}
-.dashboardlink{
-    margin: 2% 2% 2% -8%;
-    
-    
-  }
-  .navbar{
-    height: 10%;
-    padding-top: 5%;
-  }
-.headingtext{
-    padding-left:4%;
-    width: 60%;
-    height: 20%;
-    margin: 0.5% 0% 1% 22%;
-    text-align: left;
-    font-size: 3rem;
-    font-weight: 500;
-}
-.postfields{
-
-    height: 6rem;
-    font-family:Palatino Linotype;
-}
-.posttitle{
-    width:50%;
-    margin: 0 0 0 25%;
-    border:1px solid red;
-    font-size: 2.5rem;
-    font-family:Book Antiqua;
-    font-weight: 400;
-    box-shadow: 5px 5px 20px     rgb(12, 12, 12),5px -5px 20px     rgb(12, 12, 12),-10px 5px 10px     rgb(12, 12, 12);
-    background-image:linear-gradient(to right top,rgba(243, 207, 3, 0.705),rgba(247, 7, 7, 0.767));
-    background-size:contain;
-}
-.postgap{
-    height:50px;
-}
-.post{
-    width: 30%;
-    margin: auto;
-    border: 2px solid rgb(177, 23, 23);
-    box-shadow: 5px -5px 10px   rgb(224, 21, 106), 0px -5px 10px   rgb(12, 12, 12),0px 10px 10px   rgb(12, 12, 12),20px -10px 10px   rgb(12, 12, 12);
-    background-color: wheat;
-}
-.upper{
-    width: 100%;
-    height: 30px;
-    font-size: 2.1rem;
-   
-}
-.postusername{
-   width:55%;
-   text-decoration: underline;
-   margin: -0.3% 0 0 0;
-   float:left;
-   padding-left:5%;
-   height: 25px;
-   text-align: left;
-   font-family:Book Antiqua;
-}
-
-.postcontent{
-    margin:0;
-    font-family:Book Antiqua;
-    padding-left:5%;
-    text-align: left;
-    font-size: 1.8rem;
+export const Navbar =() =>{
+    return( <div className="navbar">
+        <span className="dashboardlink"><Link to="/dashboard" >Dashboard</Link></span>
+        <span className="signuplink"><Link to="/signup">Sign-Up</Link></span>
+        <span className="signinlink"><Link to="/signin">Sign-In</Link></span>
+     </div>);
  }
-.editbutton{
-    width: 20%;
-    height: 30px;
-    float:right;
-    margin-right: 3%;
-} 
-.imglike{
-    margin-left: 5%;
-    width: 100px;
-    height: 30px;
-    float: left;
-    text-align: left;
-}
-.imgdislike{
-    margin-right: 5%;
-    width: 100px;
-    height: 30px;
-    float: right;
-    text-align: right;
-}
-.count{
-   
-    width:100%;
-    height: 30px;
-}
-.textlike{
-    font-size: 1.8rem;
-    width: 20%;
-    margin: -30% 0 0 33%;
-   
-}
-.textdislike{
-    font-size: 1.8rem;
-    width: 20%;
-    margin: -30% 0 0 40%;
-   
-}
-.edit,edit:hover {
-    cursor: pointer;
-    margin-top: -7%;
-    margin-left: 10%;
-    width: 30%;
-    height: 88%;
-    font-size: 3rem;
-    color: rgb(29, 218, 129);
-   
-  }
-.delete,delete:hover{
-    cursor: pointer;
-    margin: -32% 0 0 58%;
-    width: 30%;
-    height: 88%;
-    font-size:3rem;
-    color: rgb(235, 13, 13);
-   
-}
-@media screen and (max-width:500px) {
-    html{
-     font-size: 6px;
-
+ export const Textinput = (props) =>{
+ 
+    return(
+        <div >
+           <div className="posttitle" ><p className="headingtext">Enter Your Post</p>
+                 <div className="postfields"> Username:&nbsp;<input className="inputbox" type="text" value={props.username}  onChange={props.setusername}/></div>
+                 <div className="postfields"> Post:&emsp;&emsp;&nbsp;&nbsp; <input className="inputbox" type="text" value={props.postcontent}  onChange={props.setpostcontent}/></div>
+                 <div><button className="btndash" onClick={props.textstored}>{props.btn}</button></div>
+                
+           </div>
+        </div>
+    ); 
  }
- .headingtext{
-    width: 100%;
-    height: 20%;
-    text-align: left;
-    font-size: 2.3rem;
-    font-weight: 500;
-}
-.postfields{
+ 
+ export const Showtext = (props) =>{
+     return(
+         <div className="post">
+                 <div className="upper"><p className="postusername">{props.username}</p>
+                      <div className="editbutton"><div className="edit" onClick={props.edit}>&#9874;</div>
+                      <div className="delete" onClick={props.delete} >&#9760;</div>
+                      </div>
+                </div>
+                 <p className="postcontent">{props.postcontent}</p>
+                 <div class="count">
+                      <div className="imglike"><img  onClick={props.clicklike} src="https://th.bing.com/th?q=Like+Emoticon&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.56&pid=InlineBlock&mkt=en-IN&adlt=moderate&t=1&mw=247 " alt="Like" width="25%" height="100%"/>&nbsp;&nbsp;
+                         <p className="textlike">{props.likecnt}</p>
+                      </div>
+                      <div className="imgdislike">
+                         <img onClick={props.clickdislike} src="https://www.bing.com/th?id=OIP.aIlJZec72YFowfKKQBiN8gHaHa&w=96&h=95&c=8&rs=1&qlt=90&o=6&dpr=1.56&pid=3.1&rm=2" alt="Dislike" width="25%" height="100%"/>
+                         <p className="textdislike">{props.dislikecnt}</p>
+                      </div>
+                 </div>
+         </div>
+     );
+ }
+ 
+ export const Message = (props) => {
+     return (
+         <div>
+             <p>{props.message}</p>
+         </div>
+         
+     );
+ }
+ 
+export class Dashboard extends Component {
+state={
+    arrayvalue:["name"],
+    editpostindex:null,
+    inputvalue:[],// input values for signup
+    newinputusername:'',newinputtext:'',
+    inputpostcontent:[],inputusername:[],
+    message:[' ','Post added successfully!','Post Edited !','Post Deleted!!','Some Field is kept empty,Fillup each field'],messageindex:0,
+    like:[],dislike:[],likecnt:0,btn:'Submit'
+    
 
-    height: 6rem;
-    font-family:Palatino Linotype;
 }
-.post{
-    width: 40%;
-    margin: auto;
-    border: 2px solid rgb(177, 23, 23);
-    box-shadow: 5px -5px 10px   rgb(224, 21, 106), 0px -5px 10px   rgb(12, 12, 12),0px 10px 10px   rgb(12, 12, 12),20px -10px 10px   rgb(12, 12, 12);
-    background-color: wheat;
+editpost = (index) =>{
+  this.setState({editpostindex:index});
+  this.setState({newinputusername:this.state.inputusername[index]});
+  this.setState({newinputtext:this.state.inputpostcontent[index]});
+  this.setState({btn:'edit'});
 }
-.imgdislike{
-    margin-right: 5%;
-    margin-top: -25%;
-    width: 100px;
-    height: 30px;
-    float: right;
-    text-align: right;
+deletepost = (index) => {
+ const inputusername = this.state.inputusername;
+ const inputpostcontent = this.state.inputpostcontent;
+ inputpostcontent.splice(index,1);
+ inputusername.splice(index,1);
+ this.setState({inputusername:inputusername});
+ this.setState({inputpostcontent:inputpostcontent});
+ this.setState({messageindex:3});
+ this.setState({newinputusername:''});
+ this.setState({newinputtext:''});
+ setTimeout(() => {
+    this.setState({messageindex:0});
+ }, 2000);
+
 }
-.edit,edit:hover {
-    cursor: pointer;
-    margin-top: -7%;
-    margin-left: -20%;
-    width: 30%;
-    height: 88%;
-    font-size: 3rem;
-    color: rgb(29, 218, 129);
-   
-  }
-.delete,delete:hover{
-    cursor: pointer;
-    margin: -110% 0 0 40%;
-    width: 30%;
-    height: 88%;
-    font-size:3rem;
-    color: rgb(235, 13, 13);
-   
+clicklike =(index)=>{
+ let newcnt=this.state.like[index]+1;
+ this.state.like.splice(index,1,newcnt);
+ this.setState({editpostindex:null});// just to use setstate for rerendering cgnages
+ console.log(this.state.like);
+}
+clickdislike =(index)=>{
+ let newcnt2=this.state.dislike[index]+1;
+ this.state.dislike.splice(index,1,newcnt2);
+ this.setState({editpostindex:null});// just to use setstate for rerendering cgnages
+ console.log(this.state.dislike);
 }
 
+username = (e) =>{
+
+ if(this.state.editpostindex===null){
+ this.setState({newinputusername:e.target.value});
+ console.log(this.state.newinputusername);
   
 }
+}
+postcontent = (e) =>{
+ this.setState({newinputtext:e.target.value});
+
+}
+poststored = (e) =>{
+ e.preventDefault();
+if(this.state.newinputusername===''|| this.state.newinputtext===''){
+   this.setState({messageindex:4});
+   setTimeout(() => {
+    this.setState({messageindex:0});
+ }, 2000);
+
+   console.log("coulfot")
+ }
+else if(this.state.editpostindex===null&&(this.state.newinputusername!==''||this.state.newinputtext!=='')){   
+ this.state.inputusername.push(this.state.newinputusername);
+ this.state.inputpostcontent.push(this.state.newinputtext);
+ this.state.like.push(0);
+ this.state.dislike.push(0); 
+ this.setState({newinputusername:''});
+ this.setState({newinputtext:''});
+ this.setState({messageindex:1});
+ console.log("reaching");
+ setTimeout(() => {
+    this.setState({messageindex:0});
+ }, 2000);
+
+}
+else{
+  
+  const editedinputpostcontent=this.state.newinputtext;
+  this.state.inputpostcontent.splice(this.state.editpostindex,1,editedinputpostcontent);
+  this.setState({editpostindex:null});
+  
+   this.setState({btn:'submit'});
+   this.setState({messageindex:2});
+   setTimeout(() => {
+    this.setState({messageindex:0});
+ }, 2000);
+}
+
+}
+render(){
+   
+    let textinput=null;
+    
+    if((this.state.inputpostcontent.length !==0)){                                        // for showing posts
+      textinput=(
+        <div>
+          {this.state.inputpostcontent.map(( e,index) =>{return (
+                                                            <div>
+                                                            <div className="postgap"></div>
+                                                            <Showtext 
+                                                             key={index}
+                                                             username={this.state.inputusername[index]}
+                                                             postcontent={this.state.inputpostcontent[index]} 
+                                                             clicklike={this.clicklike.bind(this,index)}
+                                                             clickdislike={this.clickdislike.bind(this,index)} 
+                                                             likecnt={this.state.like[index]} 
+                                                             dislikecnt={this.state.dislike[index]}
+                                                             edit={this.editpost.bind(this,index)}
+                                                             delete={this.deletepost.bind(this,index)} />
+                                                             </div>);
+                                                             })}
+        
+        </div> 
+               );
+    }
+      return(
+          <div>
+           <div className="messagedashboard"><Message message={this.state.message[this.state.messageindex]}/></div>
+            <Textinput username={this.state.newinputusername} setusername={this.username} postcontent={this.state.newinputtext} setpostcontent={this.postcontent} textstored={this.poststored} btn={this.state.btn} />
+            {textinput}
+          </div>
+
+      );
+
+}}
