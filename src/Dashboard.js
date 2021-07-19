@@ -181,6 +181,7 @@ render(){
            <div className="messagedashboard"><Message message={this.state.message[this.state.messageindex]}/></div>
             <Textinput username={this.state.newinputusername} setusername={this.username} postcontent={this.state.newinputtext} setpostcontent={this.postcontent} textstored={this.poststored} btn={this.state.btn} />
             {textinput}
+            <div className="messagedashboard"><Message message={this.state.message[0]}/></div>
           </div>
 
       );
