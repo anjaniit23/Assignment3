@@ -177,7 +177,7 @@ a:hover{
 }
 .imgdislike{
     margin-right: 5%;
-    margin-top: -25%;
+    margin-top: -20%;
     width: 100px;
     height: 30px;
     float: right;
@@ -195,7 +195,7 @@ a:hover{
   }
 .delete,delete:hover{
     cursor: pointer;
-    margin: -110% 0 0 40%;
+    margin: -80% 0 0 40%;
     width: 30%;
     height: 88%;
     font-size:3rem;
