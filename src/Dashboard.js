@@ -4,7 +4,7 @@ import './Dashboard.css';
 
 export const Navbar =() =>{
     return( <div className="navbar">
-        <span className="dashboardlink"><Link to="/dashboard" >Dashboard</Link></span>
+        <span className="dashboardlink"><Link to="/"  >Dashboard</Link></span>
         <span className="signuplink"><Link to="/signup">Sign-Up</Link></span>
         <span className="signinlink"><Link to="/signin">Sign-In</Link></span>
      </div>);
@@ -14,10 +14,10 @@ export const Navbar =() =>{
     return(
         <div >
            <div className="posttitle" ><p className="headingtext">Enter Your Post</p>
-                 <div className="postfields"> Username:&nbsp;<input type="text" value={props.username}  onChange={props.setusername}/><br/>
-                 Post:&emsp;&emsp;&nbsp;&nbsp; <input type="text" value={props.postcontent}  onChange={props.setpostcontent}/><br/>
-                  &emsp;&emsp;&emsp;&emsp;<button  onClick={props.textstored}>{props.btn}</button>
-                  </div>
+                 <div className="postfields"> Username:&nbsp;<input className="inputbox" type="text" value={props.username}  onChange={props.setusername}/></div>
+                 <div className="postfields"> Post:&emsp;&emsp;&nbsp;&nbsp; <input className="inputbox" type="text" value={props.postcontent}  onChange={props.setpostcontent}/></div>
+                 <div><button className="btndash" onClick={props.textstored}>{props.btn}</button></div>
+                
            </div>
         </div>
     ); 
