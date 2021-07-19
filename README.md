@@ -1,4 +1,4 @@
-just run the command 'npm run start' in the terminal, it should run the app
+ # run the command 'npm run start' in the terminal,after installing build and node mdule it should run the app
 
 
 
