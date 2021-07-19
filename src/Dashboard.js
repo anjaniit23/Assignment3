@@ -63,7 +63,7 @@ state={
     inputvalue:[],// input values for signup
     newinputusername:'',newinputtext:'',
     inputpostcontent:[],inputusername:[],
-    message:[' ','Post added successfully!','Post Edited !','Post Deleted!!','Some Field is empty,Fillup Both the fields'],messageindex:0,
+    message:[' ','Post added successfully!','Post Edited !','Post Deleted!!','Some Field is kept empty,Fillup each field'],messageindex:0,
     like:[],dislike:[],likecnt:0,btn:'Submit'
     
 
